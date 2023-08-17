@@ -1,0 +1,90 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: lightgreen;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Navbar links on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Container styles */
+.container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+/* ... (other CSS styles) */
+
+/* Rectangle styles */
+.rectangle {
+    width: 100%;
+    height: 75%;
+    background-color: #d3d3d3;
+    position: relative;
+    z-index: 1; /* Ensure the rectangle is above the background */
+}
+
+/* Water styles */
+.water {
+    width: 100%;
+    height: 50px;
+    background-color: #0077be;
+    position: relative; /* Ensure the water is above the rectangle */
+    z-index: 2;
+}
+
+/* Ship styles */
+.ship {
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(25%);
+    z-index: 3; /* Ensure the ship is above the water and rectangle */
+}
+
+/* Cloud container styles */
+.cloud-container {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust as needed */
+    z-index: 4; /* Ensure the clouds are above all other elements */
+}
+
+/* Trash styles */
+.trash {
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+    z-index: 5; /* Ensure the trash is above all other elements */
+}
+.trash2 {
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+    z-index: 5; /* Ensure the trash is above all other elements */
+}
+

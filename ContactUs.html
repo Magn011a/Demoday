@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="ContactUs.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+ 
+
+  <div class="container">
+    <form onsubmit="sendEmail(); reset(); return false;">
+      <h3>GET IN TOUCH</h3>
+    <input type="text" id="name" placeholder="Name" required>
+       <input type="Email" id="Email" placeholder="Email" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+    <button type="submit">Send</button>  
+    </form>
+  </div>
+
+  <script src="https://smtpjs.com/v3/smtp.js"> </script>
+
+  <script>
+    function sendEmail(){
+            Email.send({
+          Host : "smtp.gmail.com",
+          Username : "joelamoako14@gmail.com",
+          Password : "NotRealPassword",
+          To : 'joelamoako14@gmail.com',
+          From : document.getElementById("email").value,
+          Subject : "New Contact Form Enquiry",
+          Body : "And this is the body"
+      }).then(
+        message => alert(message)
+      ); 
+    }
+  </script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+
+  
+</body>
+
+</html>
